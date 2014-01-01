@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
     vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]
   end
 
+  config.vm.provision :shell, :inline => 'sudo aptitude update'
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'manifests'
     puppet.manifest_file  = 'default.pp'

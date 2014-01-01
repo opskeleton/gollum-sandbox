@@ -1,5 +1,12 @@
 group{ 'puppet': ensure  => present }
 
-node 'gollum.local' {
+node default {
+  class{'gollum':
+    wiki => 'play'
+  }
 
+  class{'gollum::wiki':
+    wiki => 'play'
+  }
 }
+

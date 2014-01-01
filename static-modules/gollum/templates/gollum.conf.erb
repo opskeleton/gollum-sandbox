@@ -1,0 +1,10 @@
+start on (filesystem and net-device-up IFACE=lo) or runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+respawn limit 10 5
+umask 022
+
+env WIKI=<%=@wiki%>
+ 
+exec start-stop-daemon --exec /usr/local/bin/gollum --start -- /srv/$WIKI
