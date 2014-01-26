@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bintray_deploy (0.0.3)
+    bintray_deploy (0.0.4)
       configuration
       rest-client
       thor
@@ -19,7 +19,7 @@ GEM
     mime-types (2.1)
     mocha (1.0.0)
       metaclass (~> 0.0.1)
-    opskeleton (0.4.4)
+    opskeleton (0.4.5)
       bintray_deploy
       thor
     puppet (3.4.2)
